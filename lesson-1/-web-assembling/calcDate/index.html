@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/js/css/main.css">
+
+    <script type="module" src="js/main.js"> </script>
+
+    <!--  //<script defer src="<https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js>"></script>
+    //<script defer src="js/common.js"> </script>
+    //<script defer src="js/alarmclock.js"> </script>
+    //<script defer src="js/stopwatch.js"> </script>
+    //<script defer src="js/datecalc.js"> </script>
+    //<script defer src="js/timer.js"> </script> -->
+    <title>Калькулятор дат</title>
+</head>
+
+<body>
+    <button id="page1cmd" class="cmdBtn">Таймер</button>
+    <button id="page2cmd" class="cmdBtn">Калькулятор дат</button>
+    <div id="page1" class="page hidden">
+
+        <form id="timerSetForm">
+            <h3>Таймер</h3>
+
+            <label>
+                <strong>часы:</strong>
+                <input type="number" name="timerHours" min="0" max="24" class="timerInput" />
+            </label>
+            <label>
+                <strong>мин:</strong>
+                <input type="number" name="timerMinutes" min="0" max="59" class="timerInput" />
+            </label>
+            <label>
+                <strong>сек:</strong>
+                <input type="number" name="timerSeconds" min="0" max="59" class="timerInput" />
+            </label>
+            <button type="submit">Запустить таймер</button>
+            <button hiddent=true type="button" id="stopBtn">Стоп</button>
+            <p id="timer__result"></p>
+        </form>
+    </div>
+    <div id="page2" class="page hidden">
+        <h1>Калькулятор дат</h1>
+        <form id="dateDiffForm">
+            <label for="dateForm">
+                Первая дата:
+                <input type="date" name="dateForm" id="dateForm">
+
+            </label>
+            <label for="dateTo">
+                Вторая дата:
+                <input type="date" name="dateTo" id="dateTo">
+            </label>
+            <button type="submit">Рассчитать промежуток</button>
+        </form>
+        <p id="output"></p>
+</body>
+
+</html>
